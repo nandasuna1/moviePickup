@@ -1,20 +1,31 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar, View } from 'react-native';
+import { StyleSheet } from 'react-native';
+import { ThemeProvider } from 'styled-components/native';
+import { MovieSelectionPage } from './src/pages/MovieSelectionPage';
+import theme from'./src/configs/const'
+import MovieList from './src/components/Templates/MovieList';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <ThemeProvider theme={theme}>
+    {/* <View style={styles.container}> */}
+      <StatusBar
+      barStyle="light-content"
+      translucent
+      backgroundColor="transparent"
+      />
+      <MovieSelectionPage/>
+      {/* <MovieList/> */}
+     {/* </ View> */}
+     </ThemeProvider>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     backgroundColor: '#08518d',
+//     alignItems: 'center',
+//     justifyContent: 'center',
+//   },
+// });
