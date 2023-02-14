@@ -28,21 +28,3 @@ export const MyText = styled.Text<TextInterface>`
     }
 
 `;
-
-// export const Text =  styled.Text<TextInterface>`
-//   color: ${props => props.color};
-//   ${({ size }) => setFontSize[size] };
-//   font-weight: bold;
-//   text-align: center;
-// `
-// const setFontSize = {
-//   small: css`
-//     font-size: ${RFValue(12)}px;
-//   `,
-//   normal: css`
-//       font-size: ${RFValue(16)}px;
-//   `,
-//   big: css`
-//       font-size: ${RFValue(18)}px;
-//     `,
-// }

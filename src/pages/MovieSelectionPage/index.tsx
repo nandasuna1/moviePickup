@@ -1,17 +1,25 @@
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import React from 'react'
 import MovieSelection from '../../components/Templates/MovieSelection'
-// import COLORS from '../../configs/const'
-export  function MovieSelectionPage() {
+import { StackParamsListInterface } from '../../routes/inrteface';
+
+
+type Props = NativeStackScreenProps<StackParamsListInterface, 'MovieSelection' >
+
+export  function MovieSelectionPage({navigation}: Props) {
+  
+  const handleOnPress = () => {
+    navigation.navigate('MovieList');
+  }
   return (
     <>
-        <MovieSelection 
-            backgroundColor='#08518d' 
-            HeaderProps={{
-                color:'#fff', 
-                backgroundColor:'#08518d', 
-                iconColor:'#fff' 
-            }}
-        />
+        <MovieSelection
+          HeaderProps={{
+            IconProps: {
+              onPress: handleOnPress
+            },
+          }}
+          />
     </>
   )
 }

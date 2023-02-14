@@ -13,11 +13,11 @@ export const Container = styled.View<DetailsInterface>`
 export const Title = styled.Text<DetailsInterface>`
     text-align: left;
     font-size: ${({isMain}) => isMain ? 30 : 20}px;
-    color: ${TEXT_COLOR};
+    color: ${({color}) => color || '#000'};
 `
 
 export const Subtitle = styled.Text<DetailsInterface>`
     text-align: left;
     font-size: ${({isMain}) => isMain ? 20 : 15}px;
-    color: ${TEXT_COLOR};
+    color: ${({color}) => color || '#000'};
 `

@@ -2,12 +2,20 @@ import React from 'react'
 import { IconInterface } from './interface'
 import { Container, IconBack, IconBooksMark } from './styles'
 
-export function Icon(props: IconInterface) {
-const {color='#fff', isBack = true, size=50} = props
+export function Icon({name,
+  size=50, 
+  isBack, 
+  color='#fff', 
+  onPress = () => {},
+  ...rest
+  }: IconInterface) {
+
+
   return (
-    <Container>
-       { isBack && <IconBack {...props} size={size} color={color} />}
-       { !isBack && <IconBooksMark {...props} size={size} color={color}/>}
-    </Container>
+    <Container onPress={onPress}>
+      { isBack && <IconBack size={size} color={color}   {...rest}/>}
+       { !isBack && <IconBooksMark  size={size} color={color} {...rest}/>}
+    </ Container>
+
   )
 }

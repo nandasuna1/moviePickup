@@ -18,12 +18,13 @@ export const MainCard = styled.View<CardInterface>`
     }
 `
 export const ListCard = styled.View<CardInterface>`
-    width: 95%;
-    height: 15%;
-    padding: 0px 15px;
-
+    width: 100%;
+    height: auto;
+    padding: 0 15px;
+    margin: 10px 0px;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
 
 
     ${({backgroundColor}) =>

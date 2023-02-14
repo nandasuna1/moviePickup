@@ -4,7 +4,8 @@ import { RFValue } from 'react-native-responsive-fontsize'
 import styled , {css} from 'styled-components/native'
 import { IconInterface } from './interface'
 
-export const Container = styled.View``
+export const Container = styled.TouchableOpacity``
+// export const Container = styled.View``
 
 
 export const IconBack = styled(ArrowCircleLeft)<IconInterface>`

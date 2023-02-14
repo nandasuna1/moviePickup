@@ -4,11 +4,11 @@ import { Container, Subtitle, Title } from './styled'
 
 export function Details(props: DetailsInterface) {
 
-const { subtitle, title='Title', color = '#fff', isMain=true} = props
+const { subtitle='subtitle', title='Title', color = '#fff', isMain=true} = props
   return (
     <Container>
         <Title isMain={isMain} color={color}>{title}</Title>
-        {subtitle && <Subtitle>{subtitle}</Subtitle>}
+        {subtitle && <Subtitle color={color}>{subtitle}</Subtitle>}
     </Container>
   )
 }

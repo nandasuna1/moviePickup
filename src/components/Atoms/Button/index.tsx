@@ -30,7 +30,7 @@ export function Button(props: ButtonInterface) {
             disabled={disabled}
         >
           {hasIcon && <Icon {...IconProps}/>}
-          <Text>{title}</Text>
+          <Text color={color}>{title}</Text>
         </ButtonCoponent>
   )
 }

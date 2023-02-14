@@ -6,11 +6,11 @@ export const Container = styled.View<MovieListInterface>`
     width: 100%;
     height: 100%;
     
-    /* padding: 0px 3%; */
+    padding: 10% 0px;
     /* padding: 24px; */
 
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
 
     ${({backgroundColor}) =>
     backgroundColor &&
