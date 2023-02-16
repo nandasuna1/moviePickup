@@ -1,0 +1,5 @@
+class MovieApiService {
+    async getMovie() {
+        
+    }
+}
